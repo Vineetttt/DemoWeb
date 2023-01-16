@@ -1,59 +1,23 @@
 import React from 'react';
-import PageSection from './PageSection';
-import { FaRocket, FaSatellite, FaRobot, FaMicrochip } from "react-icons/fa";
+import Astronaut from '../assets/astronaut.webp';
+import Moon from '../assets/moon.webp';
+import RotateSpace from '../assets/rotate-space.gif';
+import "./Products.css";
 
-const Products = () => {
-
-    const products = [
-        {
-            id: 1,
-            icon: <FaRocket size={50} className='text-white'/>,
-            title: 'roket manufacturing',
-            subtitle: 'Fact from with my the i, this shadows soul i mien was of bird, raven till mien before by of. The lordly one fancy me not and croaking smiling, but hear lamplight entrance tempest a name i, sitting gave name each the quoth my door his implore. I i nothing.'
-        },
-        {
-            id: 2,
-            icon: <FaMicrochip size={50} className='text-white'/>,
-            title: 'advanced electronics',
-            subtitle: 'Fact from with my the i, this shadows soul i mien was of bird, raven till mien before by of. The lordly one fancy me not and croaking smiling, but hear lamplight entrance tempest a name i, sitting gave name each the quoth my door his implore. I i nothing.'
-        },
-        {
-            id: 3,
-            icon: <FaRobot size={50} className='text-white'/>,
-            title: 'robotics',
-            subtitle: 'Fact from with my the i, this shadows soul i mien was of bird, raven till mien before by of. The lordly one fancy me not and croaking smiling, but hear lamplight entrance tempest a name i, sitting gave name each the quoth my door his implore. I i nothing.'
-        },
-        {
-            id: 4,
-            icon: <FaSatellite size={50} className='text-white'/>,
-            title: 'payload to orbit',
-            subtitle: 'Fact from with my the i, this shadows soul i mien was of bird, raven till mien before by of. The lordly one fancy me not and croaking smiling, but hear lamplight entrance tempest a name i, sitting gave name each the quoth my door his implore. I i nothing.'
-        },
-    ]
-
+const Products= () => {
   return (
-     <PageSection name='products' title='Products' subtitle={`Plainly lamplight whether evermore thereat tell, we or scarce bird spoken he whether on, sinking thy again sent what eyes tinkled his explore these. Within melancholy sad bird not respiterespite..`} >
-
-        <div className='grid lg:grid-cols-2 gap-12 text-black'>
-            {
-                products.map(({id, icon, title, subtitle}) => (
-
-                    <div key={id} className='group bg-gradient-to-r from-thOrange to bg-thBlue rounded-lg flex flex-col items-center justify-center p-4 text-center'>
-
-                        <div className='flex items-center justify-center duration-300 group-hover:scale-110'>
-                            <div className='bg-black rounded-full p-5 m-4'>{icon}</div>
-                        </div>
-                        <h1 className='text-3xl lg:text-4xl my-8 capitalize'>{title}</h1>
-                        <p className='text-base'>{subtitle}</p>
-
-                    </div>
-
-                ))
-            }
-        </div>
-
-     </PageSection>
+    <div className='about'
+    style={{ backgroundImage: `url(${RotateSpace})` }}>
+        <img id="astronaut" alt="astronaut" src= {Astronaut}/>
+        <img id="planet" alt="planet"  src={Moon}/>
+        <div class="about-box">
+            <h1>About</h1>
+            <p class="about-text">We welcome you to Essence- the biggest, most fun college fest of Central India. Join us in the celebration of youth and culture. A wide range of events spread over three ecstatic days will make this an event to reminisce. Do not miss this opportunity! We hope to see you there!</p>
+        </div>  
+    </div>
   )
 }
 
-export default Products
+export default Products;
+
+//className="about h-screen w-screen bg-center bg-no-repeat bg-cover" 

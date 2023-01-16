@@ -1,11 +1,6 @@
 import { useState } from "react";
-import Contact from "./components/Contact";
-import Customers from "./components/Customers";
-import DevAPI from "./components/DevAPI";
-import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
-import NavBar from "./components/NavBar";
-import Products from "./components/Products";
+import AboutSection from "./components/Products";
 
 function App() {
 
@@ -13,13 +8,8 @@ function App() {
 
   return (
     <div>
-      <NavBar isMenuShown={isMenuShown} setIsMenuShown={setIsMenuShown} />
       <HeroSection isMenuShown={isMenuShown} />
-      <Products />
-      <DevAPI />
-      <Customers />
-      <Contact />
-      <Footer />
+      <AboutSection />
     </div>
   );
 }
